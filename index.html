@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./index.css" />
+   
+  </head>
+  <body>
+    <div class="blue">
+      <div class="mainContainer">
+        <div class="left subContainer">
+            <div>
+                <p>BILL</p>
+            </div>
+            <div><input class="input" type="text" placeholder="$" id="input" value="" onchange='inputField(value)'></div>
+            <div><p>Select tip%</p></div>
+            <div class="abc">
+                <input class="btns" type="button" value="5%" onclick="tipCalculate(value)">
+                <input class="btns" type="button" value="10%" onclick="tipCalculate(value)">
+                <input class="btns" type="button" value="15%" onclick="tipCalculate(value)">
+            </div>
+            <div class="abc">
+                <input class="btns" type="button" value="25%" onclick="tipCalculate(value)">
+                <input class="btns" type="button" value="50%" onclick="tipCalculate(value)">
+                <input class="btns" type="button" value="custom" onclick="tipCalculate(value)">
+            </div>
+            <div><p>Number of people</p></div>
+            <div><input type="text" placeholder="people" value="" onchange="persons(value)"></div>
+        </div>
+        <div class="right subContainer">
+            <div class="block1">
+                <div class="right-topleft">
+                    <div><p>Tip Amount</p></div>
+                    <div><p>/person</p></div>
+                </div>
+                <div><h1 id="tipamount">$0.00</h1></div>
+            </div>
+            <div class="block1">
+                <div class="right-bottomleft">
+                    <div><p>Total</p></div>
+                    <div><p>/person</p></div>
+                </div>
+                <div><h1 id="total">$0.00</h1></div>
+            </div>
+            <div class="btn"><button class='btns'onclick="reset()">Reset</button></div>
+        </div>
+      </div>
+    </div>
+   <script src="cal.js"></script>
+  </body>
+</html>
